@@ -1,0 +1,28 @@
+.Footer {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 1024px;
+    background-color: #ec5656;
+}
+.circle{
+    position: absolute;
+    bottom: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #ec5656;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.add {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}

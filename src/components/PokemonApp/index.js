@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import './App.css'
-import Footer from './components/Footer'
+// import './App.css'
 
 const COLORS = {
   Psychic: "#f8a5c2",
@@ -16,17 +15,14 @@ const COLORS = {
   Fire: "#eb4d4b"
 }
 
-class App extends Component {
+class PokemonApp extends Component {
   render() {
     return (
       <div className="App">
-        <div className="title">
-          <span>My Pokedex</span>
-        </div>
-        <Footer/>
+        
       </div>
     )
   }
 }
 
-export default App
+export default PokemonApp
