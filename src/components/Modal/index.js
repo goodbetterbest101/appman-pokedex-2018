@@ -19,7 +19,7 @@ class ModalSearch extends Component {
                     <Modal.Body>
                         {this.props.pokemonCards.map( (data, index) => {
                             // console.log(index)
-                            return <Card addListCard={this.props.addListCard} index={index} imageUrl={data.imageUrl} name={data.name}/>
+                            return <Card addListCard={this.props.addListCard} num={index} imageUrl={data.imageUrl} name={data.name}/>
                         })}
                     </Modal.Body>
                 </Modal>

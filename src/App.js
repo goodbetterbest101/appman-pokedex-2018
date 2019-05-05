@@ -60,13 +60,13 @@ class App extends Component {
 
   addListCard = (index) => {
     console.log(index)
-    // const { pokemonCards, myList} = this.state
-    // let lists = myList
-    // lists.push(
-    // <Card name={this.state.pokemonCards[index].name} imageUrl={this.state.pokemonCards[index].imageUrl}/>
-    // )
-    // this.setState({ myList: lists })
-    // this.forceUpdate()
+    const { pokemonCards, myList} = this.state
+    let lists = myList
+    lists.push(
+    <Card name={this.state.pokemonCards[index].name} imageUrl={this.state.pokemonCards[index].imageUrl}/>
+    )
+    this.setState({ myList: lists })
+    this.forceUpdate()
   }
 
   render() {

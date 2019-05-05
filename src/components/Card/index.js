@@ -18,7 +18,7 @@ const COLORS = {
 
 class Card extends Component {
     render() {
-        console.log(this.props.index)
+        console.log(this.props.num)
         return (
             <div className="container">
                 <div className="box">
@@ -30,7 +30,7 @@ class Card extends Component {
                             <StatusBar name='STR'/>
                             <StatusBar name='WEAK'/>
                         </div>
-                        <div onClick={() => this.props.addListCard(this.props.key) }>
+                        <div onClick={() => this.props.addListCard(this.props.num) }>
                             ADD
                         </div>
                     </div>
