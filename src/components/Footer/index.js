@@ -20,7 +20,7 @@ class Footer extends Component {
         return (
             <div>
                 <div className="circle" >
-                <span className="add">+</span>
+                    +
                 </div>
                 <div className="Footer" />
             </div>

@@ -7,6 +7,9 @@
 }
 .circle{
     position: absolute;
+    text-align: center;
+    display: block;
+    margin: auto;
     bottom: 10px;
     width: 120px;
     height: 120px;
