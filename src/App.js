@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import Footer from './components/Footer'
 import Card from './components/Card'
+import ListCards from './components/listCards'
 
 const COLORS = {
   Psychic: "#f8a5c2",
@@ -24,7 +25,7 @@ class App extends Component {
         <div className="title">
           <span>My Pokedex</span>
         </div>
-        <Card/>
+        <ListCards/>
         <Footer/>
       </div>
     )

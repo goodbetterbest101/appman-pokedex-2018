@@ -22,9 +22,7 @@ class Card extends Component {
             <div className="container">
                 <div className="box">
                     <div className="detail"> 
-                        <div>
                         <img src="https://images.pokemontcg.io/ex8/98.png"/>
-                        </div>
                         <div className="textDetail">
                             <span className="name">Name</span>
                             <StatusBar/>
