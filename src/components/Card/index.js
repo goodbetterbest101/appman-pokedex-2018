@@ -18,16 +18,20 @@ const COLORS = {
 
 class Card extends Component {
     render() {
+        console.log(this.props.index)
         return (
             <div className="container">
                 <div className="box">
                     <div className="detail"> 
-                        <img src="https://images.pokemontcg.io/ex8/98.png"/>
+                        <img src={this.props.imageUrl}/>
                         <div className="textDetail">
-                            <span className="name">Name</span>
-                            <StatusBar/>
-                            <StatusBar/>
-                            <StatusBar/>
+                            <span className="name">{this.props.name}</span>
+                            <StatusBar name='HP'/>
+                            <StatusBar name='STR'/>
+                            <StatusBar name='WEAK'/>
+                        </div>
+                        <div onClick={() => this.props.addListCard(this.props.key) }>
+                            ADD
                         </div>
                     </div>
                 </div>

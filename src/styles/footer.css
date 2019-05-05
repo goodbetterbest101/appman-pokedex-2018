@@ -6,10 +6,13 @@
     background-color: #ec5656;
 }
 .circle{
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     text-align: center;
-    display: block;
-    margin: auto;
     bottom: 10px;
     width: 120px;
     height: 120px;
@@ -17,15 +20,6 @@
     background-color: #ec5656;
     transform: translateX(-50%);
     left: 50%;
-}
-
-.add {
-    z-index: 2;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 24px;
-    color: black;
+    font-size: 60px;
+    color: #fff;
 }

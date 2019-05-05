@@ -3,6 +3,7 @@ import './App.css'
 import Footer from './components/Footer'
 import Card from './components/Card'
 import ListCards from './components/listCards'
+import ModalSearch from './components/Modal'
 
 const COLORS = {
   Psychic: "#f8a5c2",
@@ -18,15 +19,66 @@ const COLORS = {
   Fire: "#eb4d4b"
 }
 
+
 class App extends Component {
+  state = {
+    openAdd: false,
+    pokemonCards: [],
+    myList: []
+  }
+
+  componentDidMount = () => {
+    this.getCards()
+  }
+
+  getCards = () => {
+    fetch('http://localhost:3030/api/cards?limit=20', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }
+    }).then(res => res.json())
+      .then(data => {
+        console.log(data.cards)
+        this.setState({ pokemonCards: data.cards})
+      }).catch((error) => {
+        console.error(error);
+      });
+  }
+
+
+  openAddCard = () => {
+    console.log('click')
+    this.setState({ openAdd: true })
+  }
+
+  closeAddCard = () => {
+    console.log('click')
+    this.setState({ openAdd: false })
+  }
+
+  addListCard = (index) => {
+    console.log(index)
+    // const { pokemonCards, myList} = this.state
+    // let lists = myList
+    // lists.push(
+    // <Card name={this.state.pokemonCards[index].name} imageUrl={this.state.pokemonCards[index].imageUrl}/>
+    // )
+    // this.setState({ myList: lists })
+    // this.forceUpdate()
+  }
+
   render() {
+    console.log('aaa',this.state.myList)
     return (
       <div className="App">
         <div className="title">
           <span>My Pokedex</span>
         </div>
-        <ListCards/>
-        <Footer/>
+        <ListCards myList={this.state.myList}/>
+        <Footer openAddCard={this.openAddCard} />
+        <ModalSearch pokemonCards={this.state.pokemonCards} openAdd={this.state.openAdd} closeAddCard={this.closeAddCard} addListCard={this.addListCard}/>
       </div>
     )
   }

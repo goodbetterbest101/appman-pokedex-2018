@@ -1,5 +1,6 @@
 .box {
-    margin: 20px 20px 20px 20px;
+    /* margin: 20px 20px 20px 20px; */
+    margin-bottom: 20px;
     height: 180px;
     width: 100%;
     background-color: #f3f4f7;

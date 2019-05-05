@@ -8,21 +8,9 @@ class ListCards extends Component {
     render() {
         return (
             <div className="listContainer">
-                {/* <Container>
-                    <Row>
-                        <Col>1 of 2</Col>
-                        <Col>2 of 2</Col>
-                    </Row>
-                </Container> */}
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+                {this.props.myList.map( (data, index) => {
+                    return <Card />
+                })}
             </div>
                 )
             }

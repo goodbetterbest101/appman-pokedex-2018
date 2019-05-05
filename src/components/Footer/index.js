@@ -19,7 +19,7 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <div className="circle" >
+                <div onClick={() => this.props.openAddCard()} className="circle" >
                     +
                 </div>
                 <div className="Footer" />

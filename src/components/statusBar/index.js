@@ -6,12 +6,11 @@ class StatusBar extends Component {
         return (
             <div className="container">
                 <div className="detail">
-                    <span>Name</span>
+                    <span>{this.props.name}</span>
                     <div className="outer">
                         <div className="inner" style={{ width: '50px' }}></div>
                     </div>
                 </div>
-
             </div>
         )
     }
