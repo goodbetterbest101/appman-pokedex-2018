@@ -47,6 +47,23 @@ class App extends Component {
       });
   }
 
+  searchCards = (name,type) => {
+    console.log(name)
+    fetch(`http://localhost:3030/api/cards?limit=20&name=${name}&type=${type}`, {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }
+    }).then(res => res.json())
+      .then(data => {
+        // console.log(data)
+        this.setState({ pokemonCards: data.cards})
+      }).catch((error) => {
+        console.error(error);
+      });
+  }
+
 
   openAddCard = () => {
     console.log('click')
@@ -79,7 +96,7 @@ class App extends Component {
         </div>
         <ListCards myList={this.state.myList}/>
         <Footer openAddCard={this.openAddCard} />
-        <ModalSearch pokemonCards={this.state.pokemonCards} openAdd={this.state.openAdd} closeAddCard={this.closeAddCard} addListCard={this.addListCard}/>
+        <ModalSearch searchCards={this.searchCards} pokemonCards={this.state.pokemonCards} openAdd={this.state.openAdd} closeAddCard={this.closeAddCard} addListCard={this.addListCard}/>
       </div>
     )
   }
