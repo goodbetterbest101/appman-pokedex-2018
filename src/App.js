@@ -59,8 +59,8 @@ class App extends Component {
   }
 
   addListCard = (index) => {
-    console.log(index)
     const { pokemonCards, myList} = this.state
+    console.log(this.state.pokemonCards[index].name)
     let lists = myList
     lists.push(
     <Card name={this.state.pokemonCards[index].name} imageUrl={this.state.pokemonCards[index].imageUrl}/>

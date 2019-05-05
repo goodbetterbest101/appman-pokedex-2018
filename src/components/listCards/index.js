@@ -9,7 +9,7 @@ class ListCards extends Component {
         return (
             <div className="listContainer">
                 {this.props.myList.map( (data, index) => {
-                    return <Card />
+                    return data
                 })}
             </div>
                 )
