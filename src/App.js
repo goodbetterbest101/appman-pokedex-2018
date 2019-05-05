@@ -60,12 +60,13 @@ class App extends Component {
 
   addListCard = (index) => {
     const { pokemonCards, myList} = this.state
-    console.log(this.state.pokemonCards[index].name)
     let lists = myList
+    let oldLists = pokemonCards
+    oldLists.splice(index,1)
     lists.push(
-    <Card name={this.state.pokemonCards[index].name} imageUrl={this.state.pokemonCards[index].imageUrl}/>
+      <Card name={this.state.pokemonCards[index].name} imageUrl={this.state.pokemonCards[index].imageUrl}/>
     )
-    this.setState({ myList: lists })
+    this.setState({ myList: lists, pokemonCards: oldLists })
     this.forceUpdate()
   }
 

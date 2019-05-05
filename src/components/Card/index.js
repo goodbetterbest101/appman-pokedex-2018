@@ -18,7 +18,6 @@ const COLORS = {
 
 class Card extends Component {
     render() {
-        console.log(this.props.num)
         return (
             <div className="container">
                 <div className="box">
